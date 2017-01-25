@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { routing } from "./app.routing";
 import { AngularFireModule, FirebaseAppConfig } from "angularfire2";
+import { MaterialModule } from '@angular/material';
 
 const firebaseConfig: FirebaseAppConfig = {
   apiKey: "AIzaSyBGn6GcIMf1C6u4GWv7To89nM0mKYQTIIc",
@@ -23,7 +24,8 @@ const firebaseConfig: FirebaseAppConfig = {
     FormsModule,
     HttpModule,
     routing,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    MaterialModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
