@@ -1,12 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { MdIconModule, MdToolbarModule, MdButtonModule } from "@angular/material";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
-  declarations: [],
+  declarations: [ToolbarComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    MdIconModule.forRoot(),
+    MdToolbarModule.forRoot(),
+    MdButtonModule.forRoot()
   ],
-  exports : [],
+  exports : [
+    ToolbarComponent
+  ],
   providers : []
 })
 export class LayoutModule { }
