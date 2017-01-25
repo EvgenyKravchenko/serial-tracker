@@ -6,6 +6,7 @@ import { SerialsPageComponent } from './serials-page/serials-page.component';
 import { SerialListComponent } from './serial-list/serial-list.component';
 import { SerialListItemComponent } from './serial-list-item/serial-list-item.component';
 import { SerialService } from "./services/serial.service";
+import { TmdbService } from "./services/tmdb.service";
 
 @NgModule({
   declarations: [
@@ -19,6 +20,9 @@ import { SerialService } from "./services/serial.service";
     TrackerRoutingModule
   ],
   exports : [],
-  providers : [SerialService]
+  providers : [
+    SerialService,
+    TmdbService
+  ]
 })
 export class TrackerModule { }
