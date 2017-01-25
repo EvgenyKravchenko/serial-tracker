@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Serial } from "../services/Serial";
-import { SerialService } from "../services/serial.service";
+import { Serial } from "../../shared/services/Serial";
+import { SerialService } from "../../shared/services/serial.service";
 import { Observable } from "rxjs";
 
 @Component({

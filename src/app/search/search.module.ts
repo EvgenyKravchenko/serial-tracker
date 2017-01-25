@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchRoutingModule } from "./search.routing";
-import { TmdbService } from "../tracker/services/tmdb.service";
 import { SearchComponent } from './search/search.component';
 import { SearchPageComponent } from './search-page/search-page.component';
+import { SharedModule } from "../shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -11,11 +11,10 @@ import { SearchPageComponent } from './search-page/search-page.component';
   SearchPageComponent],
   imports: [
     CommonModule,
+    SharedModule,
     SearchRoutingModule
   ],
   exports : [],
-  providers : [
-    TmdbService
-  ]
+  providers : []
 })
 export class SearchModule { }

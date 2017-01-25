@@ -3,26 +3,19 @@ import { CommonModule } from '@angular/common';
 import { TrackerRoutingModule } from "./tracker.routing";
 import { TrackerComponent } from './tracker/tracker.component';
 import { SerialsPageComponent } from './serials-page/serials-page.component';
-import { SerialListComponent } from './serial-list/serial-list.component';
-import { SerialListItemComponent } from './serial-list-item/serial-list-item.component';
-import { SerialService } from "./services/serial.service";
-import { TmdbService } from "./services/tmdb.service";
+import { SharedModule } from "../shared/shared.module";
 
 @NgModule({
   declarations: [
     TrackerComponent,
-    SerialsPageComponent,
-    SerialListComponent,
-    SerialListItemComponent
+    SerialsPageComponent
   ],
   imports: [
     CommonModule,
+    SharedModule,
     TrackerRoutingModule
   ],
   exports : [],
-  providers : [
-    SerialService,
-    TmdbService
-  ]
+  providers : []
 })
 export class TrackerModule { }

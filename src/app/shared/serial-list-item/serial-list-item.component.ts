@@ -3,8 +3,8 @@ import { Serial } from "../services/Serial";
 
 @Component({
   selector: 'app-serial-list-item',
-  templateUrl: './serial-list-item.component.html',
-  styleUrls: ['./serial-list-item.component.scss']
+  templateUrl: 'serial-list-item.component.html',
+  styleUrls: ['serial-list-item.component.scss']
 })
 export class SerialListItemComponent implements OnInit {
 
