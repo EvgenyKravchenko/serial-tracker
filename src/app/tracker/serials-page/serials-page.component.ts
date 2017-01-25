@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Serial } from "../services/Serial";
+import { SerialService } from "../services/serial.service";
+import { Observable } from "rxjs";
 
 @Component({
   selector: 'app-serials-page',
@@ -8,22 +10,12 @@ import { Serial } from "../services/Serial";
 })
 export class SerialsPageComponent implements OnInit {
 
-  serials: Serial[] = [
-    {
-      title: "Supernatual",
-      currentSeason: 9,
-      lastEpisode: 3
-    },
-    {
-      title: "Braking Bad",
-      currentSeason: 4,
-      lastEpisode: 8
-    }
-  ];
+  private serials$: Observable<Serial[]>;
 
-  constructor() { }
+  constructor(private serialService: SerialService) { }
 
   ngOnInit() {
+    this.serials$ = this.serialService.getSerialsList();
   }
 
 }
