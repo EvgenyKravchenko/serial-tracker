@@ -1,0 +1,6 @@
+<div class="list-container">
+  <md-input-container class="search-input-container">
+    <input md-input class="search-input" placeholder="Start search here" />
+  </md-input-container>
+</div>
+<app-serial-list [serials]="searchResults$ | async"></app-serial-list>

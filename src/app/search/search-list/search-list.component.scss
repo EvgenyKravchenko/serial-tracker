@@ -1,0 +1,12 @@
+.list-container {
+  display: flex;
+  justify-content: center;
+  .search-input-container {
+    width: 50%;
+
+    .search-input {
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+}

@@ -1,4 +1,9 @@
-<div>
-  <span>{{serial.title}}</span>
-  <span>Last episode: {{serial.lastEpisode}}</span>
+<div class="serial-list-item">
+  <div>
+    <img [src]="getImageSrc(serial.poster_path)" width="250px">
+  </div>
+  <div>
+    <h3>{{serial.name}}</h3>
+    <span>{{serial.overview}}</span>
+  </div>
 </div>

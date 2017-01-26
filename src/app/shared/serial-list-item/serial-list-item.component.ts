@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Serial } from "../services/Serial";
+import { TmdbSerial } from "../services/TmdbSerial";
+import { TmdbSerialSearchResult } from "../services/TmdbSerialSearchResult";
 
 @Component({
   selector: 'app-serial-list-item',
@@ -8,11 +10,14 @@ import { Serial } from "../services/Serial";
 })
 export class SerialListItemComponent implements OnInit {
 
-  @Input() serial: Serial;
+  @Input() serial: TmdbSerialSearchResult;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  getImageSrc(path: string) {
+    return `http://image.tmdb.org/t/p/w300${path}`;
+  }
 }

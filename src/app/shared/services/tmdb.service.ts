@@ -17,8 +17,9 @@ export class TmdbService {
     params.set('language', 'en-US');
     params.set('query', searchString);
 
+    opt.search = params;
 
-    return this.http.get(`${TmdbService.API_URL}/search/tv`, params)
+    return this.http.get(`${TmdbService.API_URL}/search/tv`, opt)
       .map(response => response.json());
   }
 
