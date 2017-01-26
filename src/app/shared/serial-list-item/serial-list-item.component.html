@@ -1,9 +1,14 @@
 <div class="serial-list-item">
-  <div>
-    <img [src]="getImageSrc(serial.poster_path)" width="250px">
+  <div class="poster-container">
+    <a [routerLink]="['/search/find', serial.id]" *ngIf="serial.poster_path">
+      <img [src]="getImageSrc(serial.poster_path)" alt="No Poster">
+    </a>
   </div>
-  <div>
-    <h3>{{serial.name}}</h3>
+  <div class="item-content">
+    <h3 class="header">
+      <a [routerLink]="['/search/find', serial.id]">{{serial.name}}</a>
+      <span class="rating" *ngIf="serial.vote_count > 0">Rating: {{serial.vote_average}} ({{serial.vote_count}})</span>
+    </h3>
     <span>{{serial.overview}}</span>
   </div>
 </div>

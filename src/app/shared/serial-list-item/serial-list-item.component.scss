@@ -1,8 +1,33 @@
+$poster-width: 250px;
+
 :host {
   display: flex;
   justify-content: space-between;
 
   .serial-list-item {
     display: flex;
+
+    .poster-container {
+      min-width: $poster-width;
+
+      img {
+        width: $poster-width;
+      }
+    }
+
+    .item-content {
+      padding: 0 15px;
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .rating {
+          font-size: smaller;
+        }
+      }
+
+    }
   }
 }

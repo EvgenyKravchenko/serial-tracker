@@ -1,0 +1,28 @@
+.serial-info-container {
+  display: flex;
+
+  .poster-image {
+    height: calc(100vh - 64px);
+  }
+
+  .content-container {
+    padding: 0 15px;
+
+
+
+    .runtime {
+      font-size: smaller;
+      color: grey;
+    }
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+
+}
+
+

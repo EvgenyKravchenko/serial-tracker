@@ -1,0 +1,20 @@
+<div class="serial-info-container" *ngIf="serial">
+  <div *ngIf="serial.poster_path">
+    <img class="poster-image" [src]="getPosterUrl()" />
+  </div>
+  <div class="content-container">
+    <h2 class="title">
+      <span>{{serial.name}} ({{generateDatesString()}})</span>
+      <span *ngIf="serial.vote_count > 0" class="rating">Rating: {{serial.vote_average}} ({{serial.vote_count}})</span>
+    </h2>
+
+    <md-chip-list>
+      <md-chip *ngFor="let genre of serial.genres">{{genre.name}}</md-chip>
+    </md-chip-list>
+    <p class="runtime">Run time {{serial.episode_run_time[0]}} min</p>
+
+    <p>{{serial.overview}}</p>
+
+    <div>Seasons: {{serial.number_of_seasons}}</div>
+  </div>
+</div>
