@@ -5,9 +5,7 @@
   <div class="content-container">
     <app-serial-title [serial]="serial"></app-serial-title>
 
-    <md-chip-list>
-      <md-chip *ngFor="let genre of serial.genres">{{genre.name}}</md-chip>
-    </md-chip-list>
+    <app-serial-genres-list [genres]="serial.genres"></app-serial-genres-list>
     <p class="runtime">Run time {{serial.episode_run_time[0]}} min</p>
 
     <p>{{serial.overview}}</p>
