@@ -1,0 +1,14 @@
+<p class="actions">
+  <button *ngIf="!isWatching" md-button class="watch-button" (click)="onWatch.next()">
+    <md-icon>add_box</md-icon>
+    Watch
+  </button>
+  <button *ngIf="isWatching" md-button class="watch-button" disabled>
+    <md-icon>video_label</md-icon>
+    Watching
+  </button>
+  <button md-button class="archive-button" (click)="onArchive.next()">
+    <md-icon>archive</md-icon>
+    Archive
+  </button>
+</p>

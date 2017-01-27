@@ -40,6 +40,10 @@ export class SerialInfoComponent implements OnInit {
     this.serialService.addToWatchList(this.serial);
   }
 
+  archiveSerial() {
+    console.log('Will be archived someday');
+  }
+
   onSerialReady(serial: TmdbSerial) {
     console.log('Fetch:', serial);
     this.serial = serial;

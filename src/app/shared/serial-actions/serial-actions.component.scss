@@ -1,0 +1,29 @@
+.actions {
+  display: flex;
+
+  button {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+
+    &.watch-button {
+      &:hover {
+        md-icon.material-icons {
+          color: #00d0ff;
+        }
+      }
+    }
+
+    &.archive-button {
+      &:hover {
+        md-icon.material-icons {
+          color: grey;
+        }
+      }
+    }
+
+    md-icon {
+      margin-right: 5px;
+    }
+  }
+}
