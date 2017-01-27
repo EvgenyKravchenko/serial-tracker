@@ -5,6 +5,9 @@ import { enableProdMode } from '@angular/core';
 import { environment } from './environments/environment';
 import { AppModule } from './app/app.module';
 
+const firebase = require('firebase');
+const firebaseui = require('firebaseui');
+
 if (environment.production) {
   enableProdMode();
 }

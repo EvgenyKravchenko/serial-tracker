@@ -7,6 +7,7 @@ import { TmdbService } from "./services/tmdb.service";
 import { RouterModule } from "@angular/router";
 import { SerialInfoComponent } from "./serial-info/serial-info.component";
 import { MdChipsModule } from "@angular/material";
+import { AuthService } from "./services/auth.service";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MdChipsModule } from "@angular/material";
   ],
   providers : [
     SerialService,
-    TmdbService
+    TmdbService,
+    AuthService
   ]
 })
 export class SharedModule { }
