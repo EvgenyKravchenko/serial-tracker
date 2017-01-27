@@ -9,6 +9,7 @@ import { SerialInfoComponent } from "./serial-info/serial-info.component";
 import { MdChipsModule, MdIconModule, MdButtonModule } from "@angular/material";
 import { AuthService } from "./services/auth.service";
 import { SerialActionsComponent } from './serial-actions/serial-actions.component';
+import { SerialTitleComponent } from './serial-title/serial-title.component';
 
 const MATERIAL_MODULES: any[] = [
   MdChipsModule.forRoot(),
@@ -21,7 +22,8 @@ const MATERIAL_MODULES: any[] = [
     SerialListComponent,
     SerialListItemComponent,
     SerialInfoComponent,
-    SerialActionsComponent
+    SerialActionsComponent,
+    SerialTitleComponent
   ],
   imports: [
     CommonModule,

@@ -3,10 +3,7 @@
     <img class="poster-image" [src]="getPosterUrl()" />
   </div>
   <div class="content-container">
-    <h2 class="title">
-      <span>{{serial.name}} ({{generateDatesString()}})</span>
-      <span *ngIf="serial.vote_count > 0" class="rating">Rating: {{serial.vote_average}} ({{serial.vote_count}})</span>
-    </h2>
+    <app-serial-title [serial]="serial"></app-serial-title>
 
     <md-chip-list>
       <md-chip *ngFor="let genre of serial.genres">{{genre.name}}</md-chip>

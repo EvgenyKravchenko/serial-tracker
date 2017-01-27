@@ -32,9 +32,7 @@ export class SerialInfoComponent implements OnInit {
     return `http://image.tmdb.org/t/p/w500${this.serial.poster_path}`;
   }
 
-  generateDatesString() {
-    return this.serialService.getDatesStringForSerial(this.serial);
-  }
+
 
   watchSerial() {
     this.serialService.addToWatchList(this.serial);

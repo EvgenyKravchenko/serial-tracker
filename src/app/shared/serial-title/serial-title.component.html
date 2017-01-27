@@ -1,0 +1,4 @@
+<h2 class="title">
+  <span>{{serial.name}} ({{generateDatesString()}})</span>
+  <span *ngIf="serial.vote_count > 0" class="rating">Rating: {{serial.vote_average}} ({{serial.vote_count}})</span>
+</h2>
