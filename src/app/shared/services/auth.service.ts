@@ -25,6 +25,8 @@ export class AuthService {
       return null;
     })
       .do(user => this.user = user);
+
+    this.user$.subscribe();
   }
 
   public isLoggedIn() {
@@ -43,5 +45,9 @@ export class AuthService {
 
   public logout() {
     this.af.auth.logout();
+  }
+
+  getUserId() {
+    return this.user.uid;
   }
 }

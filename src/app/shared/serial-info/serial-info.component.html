@@ -15,6 +15,21 @@
 
     <p>{{serial.overview}}</p>
 
+    <p class="actions" *ngIf="(auth.getUser$() | async)">
+      <button *ngIf="!isWatching" md-button class="watch-button" (click)="watchSerial()">
+        <md-icon>add_box</md-icon>
+        Watch
+      </button>
+      <button *ngIf="isWatching" md-button class="watch-button" disabled>
+        <md-icon>video_label</md-icon>
+        Watching
+      </button>
+      <button md-button class="archive-button">
+        <md-icon>archive</md-icon>
+        Archive
+      </button>
+    </p>
+
     <div>Seasons: {{serial.number_of_seasons}}</div>
   </div>
 </div>

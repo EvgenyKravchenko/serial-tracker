@@ -6,8 +6,14 @@ import { SerialService } from "./services/serial.service";
 import { TmdbService } from "./services/tmdb.service";
 import { RouterModule } from "@angular/router";
 import { SerialInfoComponent } from "./serial-info/serial-info.component";
-import { MdChipsModule } from "@angular/material";
+import { MdChipsModule, MdIconModule, MdButtonModule } from "@angular/material";
 import { AuthService } from "./services/auth.service";
+
+const MATERIAL_MODULES: any[] = [
+  MdChipsModule.forRoot(),
+  MdIconModule.forRoot(),
+  MdButtonModule.forRoot()
+];
 
 @NgModule({
   declarations: [
@@ -18,7 +24,7 @@ import { AuthService } from "./services/auth.service";
   imports: [
     CommonModule,
     RouterModule,
-    MdChipsModule.forRoot()
+    ...MATERIAL_MODULES
   ],
   exports : [
     SerialListComponent,

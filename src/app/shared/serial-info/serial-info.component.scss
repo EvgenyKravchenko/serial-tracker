@@ -8,8 +8,6 @@
   .content-container {
     padding: 0 15px;
 
-
-
     .runtime {
       font-size: smaller;
       color: grey;
@@ -19,6 +17,36 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+
+    .actions {
+      display: flex;
+
+      button {
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+
+        &.watch-button {
+          &:hover {
+            md-icon.material-icons {
+              color: #00d0ff;
+            }
+          }
+        }
+
+        &.archive-button {
+          &:hover {
+            md-icon.material-icons {
+              color: grey;
+            }
+          }
+        }
+
+        md-icon {
+          margin-right: 5px;
+        }
+      }
     }
   }
 
